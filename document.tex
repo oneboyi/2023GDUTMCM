@@ -9,7 +9,7 @@
 \usetikzlibrary{graphs, positioning, quotes, shapes.geometric}
 \usepackage{url}
 \usepackage{threeparttable}
-\usepackage{CJK}
+%\usepackage{CJK}
 \usepackage[colorlinks,
 linkcolor=blue,
 anchorcolor=blue, 
@@ -23,20 +23,27 @@ citecolor=blue,
 	\date{}
 	\maketitle  
 	\section*{\centering \textbf{摘要}}
-		q \cite{NBS}
+		a
 		\newpage
 	\section{问题重述}
 		\subsection{问题背景}
-			hehe \cite{kaldor1957model}
-			\begin{figure}[htb]
+		\par 供水系统在我们的日程生活中至关重要，但是供水系统有时会发生各种各样的故障，从而导致漏水的发生，这是一个大问题。在这样的背景下，电磁流量计应运而生，用于测量流量以及监测漏水，一种方法是获取某一区域输入和输出水流量的插值加以评价。 \cite{kaldor1957model}
+		\par 如今已经有许多基于流量数据的分析方法，但是还有一些挑战存在，比较重要的三个：首先是需要设计一个通用模型来了解流量计的数据模式，然后是如何更加快速地检测流量异常，最后一个挑战是如何应对噪声的影响。
+		\par 您的团队需要设计一个模型来应对上述挑战，需要对给定数据进行清理，开发异常检测模型，并优化模型，数据是八个不同虚拟区域的输入水流量和输出水流量之差。具体的任务有：
+
+		\begin{itemize}
+			\item 分析数据模式，建立检测异常的标准
+			\item 建立通用模型对八个区域进行异常值检测
+			\item 测试模型并解释建模和异常值检测的结果
+		\end{itemize}
+
+		\begin{figure}[htb]
 			\centering
 			\includegraphics[width=10cm]{pictures/jmgc.png}
 			\caption{建模过程}
 			\label{jmgc}
-			\end{figure}	
-		aa\cite{ywf2017eduandeco}
-		\subsection{需要解决的问题}
-			hehe \cite[text]{sqf}
+		\end{figure}	
+		123
 	\section{问题分析}	
 		hehe
 	\section{模型假设}
