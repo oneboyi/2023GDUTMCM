@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[UTF8]{article}
 \usepackage{ctex}
 \usepackage{geometry}
 \usepackage{cite}
@@ -16,19 +16,21 @@ anchorcolor=blue,
 citecolor=blue,        
 ]{hyperref}
 %\ctexset{bibname=}
+\geometry{top=1cm}
 \begin{document}
 	\title{\vspace{+10pt} \heiti \textbf {智能水务分析模型}}
 	\songti
-	\author{}
+	\author{oneboyi}
 	\date{}
 	\maketitle  
-	\section*{\centering \textbf{摘要}}
-		a
+	\section*{\centering{摘要}}
+		\songti anchorc
+		\\ \heiti 关键词：\songti IQR、非正态分布、箱线图、孤立森林
 		\newpage
 	\section{问题重述}
 		\subsection{问题背景}
-		\par 供水系统在我们的日程生活中至关重要，但是供水系统有时会发生各种各样的故障，从而导致漏水的发生，这是一个大问题。在这样的背景下，电磁流量计应运而生，用于测量流量以及监测漏水，一种方法是获取某一区域输入和输出水流量的插值加以评价。 \cite{kaldor1957model}
-		\par 如今已经有许多基于流量数据的分析方法，但是还有一些挑战存在，比较重要的三个：首先是需要设计一个通用模型来了解流量计的数据模式，然后是如何更加快速地检测流量异常，最后一个挑战是如何应对噪声的影响。
+		\par 供水系统在我们的日程生活中至关重要，但是供水系统有时会发生各种各样的故障，从而导致漏水的发生，这是一个大问题。在这样的背景下，电磁流量计应运而生，用于测量流量以及监测漏水，一种方法是获取某一区域输入和输出水流量的插值加以评价。 
+		\par 如今已经有许多基于流量数据的分析方法，但是还有一些挑战存在，比较重要的三个：首先是需要设计一个通用模型来了解流量计的数据模式，然后是如何更加快速地检测流量异常，最后一个挑战是如何应对噪声的影响。\cite[C1]{znswxxh}
 		\par 您的团队需要设计一个模型来应对上述挑战，需要对给定数据进行清理，开发异常检测模型，并优化模型，数据是八个不同虚拟区域的输入水流量和输出水流量之差。具体的任务有：
 
 		\begin{itemize}
@@ -43,9 +45,27 @@ citecolor=blue,
 			\caption{建模过程}
 			\label{jmgc}
 		\end{figure}	
-		123
-	\section{问题分析}	
-		hehe
+	\section{数据模式分析与异常检测标准的确立}	
+	\subsection{数据概览分析}
+		\par 题目所给的数据来自于八个不同的虚拟地区，每个地区的流量差值是一个与时间相关的变量，这些值中既有正数，也有负数。大部分流量之差的绝对值都在10以内，如果发现绝对值过大，则可初步认为该数据是异常数据。流量数据随着时间的变化而变化，不同地区流量数据随时间变化的规律也各不相同。
+		\par 首先判断各个地区的数据是否满足正态分布，采用四分位距的方法判断是否满足或者接近于正太分布，如果符合正态分布，则可以使用Z-score判断数据是否异常，如果不符合，则需要考虑其他的方法。
+		\par 计算可得八个虚拟地区输入和输出水流量之差的四分位距：
+		\begin{table}[!ht]
+    \centering
+	\resizebox{0.8\textwidth}{!}
+	{
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+    \hline
+        region\_1 & region\_2 & region\_3 & region\_4 & region\_5 & region\_6 & region\_7 & region\_8 \\ \hline
+        3.802019768 & 1.108408668 & 1.2881612 & 0.678413944 & 4.157332959 & 4.746437346 & 6.514955518 & 1.616935081 \\ \hline
+    \end{tabular}
+	}
+	\end{table}
+	\\可见并不满足正态分布的要求，因此不能采用Z-score判断数据是否异常。对于不满足正态分布的数据，可以使用箱线图进行异常数据的检测。
+	\subsection{利用箱线图进行数据分析并检测异常数据}
+
+	\section{建立检测异常的标准}
+	\subsection{}
 	\section{模型假设}
 		anch
 	\begin{itemize}
