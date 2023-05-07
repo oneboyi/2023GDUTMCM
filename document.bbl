@@ -5,4 +5,19 @@
 \newblock 智慧水务信息化建设规划与实践.
 \newblock {\em 水利电力技术与应用}, 3(9), 2021.
 
+\bibitem{liu2008isolation}
+Fei~Tony Liu, Kai~Ming Ting, and Zhi-Hua Zhou.
+\newblock Isolation forest.
+\newblock In {\em 2008 eighth ieee international conference on data mining}, pages 413--422. IEEE, 2008.
+
+\bibitem{wikiif}
+WiKipedia.
+\newblock Isolation forest.
+\newblock \url{https://en.wikipedia.org/wiki/Isolation_forest}.
+
+\bibitem{zhihuiif1}
+\url{https://www.zhihu.com/people/lao-q-84}.
+\newblock 超详细！孤立森林异常检测算法原理和实战（附代码）.
+\newblock \url{https://zhuanlan.zhihu.com/p/492469453}.
+
 \end{thebibliography}
