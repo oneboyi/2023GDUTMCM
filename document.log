@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.31)  7 MAY 2023 18:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.31)  7 MAY 2023 19:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -870,7 +870,7 @@ Package fontspec Info: Font family 'MicrosoftYaHei(0)' created for font
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: EF556AB612C4682924FB2AD349CF3DEB;1867.
+(rerunfilecheck)             Checksum: 99FA54AECA5E4DBB4F1FB7DD480712C6;1851.
  ) 
 Here is how much of TeX's memory you used:
  28318 strings out of 478630
